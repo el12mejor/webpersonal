@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+
+{%block backgroud%}{%load static%}{%static 'core/img/portfolio-bg.jpg'%}{%endblock%}
+{%block headers%}
+<div class="site-heading">
+    <h1>Portafolio</h1>
+    <span class="subheading">Currículo</span>
+
+{%endblock%}
+{%block content%}
+{% for projects in project %}
+ <!-- Proyecto -->
+ <div class="row project">  	
+    <div class="col-lg-3 col-md-4 offset-lg-1">
+        <img class="img-fluid" src="{{projects.image.url}}" alt="">
+    </div>
+  <div class="col-lg-7 col-md-8">
+        <h2 class="section-heading title">{{projects.title}}</h2>   
+    <p>{{projects.description}}</p>
+    {%if projects.link%}
+    <p><a href = "{{projects.link}}" target=_blank">Más información</a></p>
+    {% endif %}
+    <span style="text-size:10px">Creado en: <br>{{projects.created}}</span>
+    
+    </div>
+</div>
+
+{% endfor %}
+{%endblock%}

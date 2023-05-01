@@ -1,0 +1,29 @@
+
+{% extends 'core/base.html' %}
+{%block title%}Acerca de {%endblock%}
+{%block backgroud%}{%load static%}{%static 'core/img/about-bg.jpg'%}{%endblock%}
+
+{%block headers%}
+<h1>Acerca de</h1>
+<span class="subheading">Biografía</span>
+
+{%endblock%}
+{%block content%}
+
+
+
+<div class="row"> 
+        <div class="col-lg-3 col-md-4 offset-lg-1">
+            <img class="img-fluid avatar" sytle="border-radius:50%"src="{% static 'core/img/avatars.jpg' %}" alt="">
+        </div>
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading">Yeivison Rodriguez</h2>   
+            <p>Hola! Soy una persona apasionada por la programación y la solución de problemas, y me gusta estar siempre al día con las últimas tendencias y tecnologías en mi campo. Mi formación en el SENA en la tecnología ADSI me ha proporcionado una sólida base en el análisis y diseño de sistemas de información, programación orientada a objetos, bases de datos, diseño web y seguridad informática.
+
+                Me encanta enfrentar nuevos desafíos y encontrar soluciones innovadoras para los problemas que se presentan en el mundo de la tecnología. Soy una persona proactiva y estoy dispuesto a trabajar duro para alcanzar mis objetivos. </p>
+        </div>
+    </div>
+
+{% endblock %}
+
+
